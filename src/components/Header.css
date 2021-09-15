@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap");
+header {
+  color: #3eff04;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0.5rem 0;
+}
+
+header h1 {
+  font-size: calc(3rem + 3vw);
+  color: #3eff04;
+}
+
+header .watermark {
+  position: relative;
+  left: 20%;
+}
+
+header .watermark span {
+  color: #4b4b4b;
+  font-size: calc(0.3em + 2vw);
+}
+
+header .watermark #HXN {
+  font-family: 'Amatic SC', cursive;
+  color: #3eff04;
+  font-size: calc(1.5em + 2vw);
+}
+/*# sourceMappingURL=Header.css.map */

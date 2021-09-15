@@ -1,0 +1,10 @@
+.figure-container {
+  fill: transparent;
+  stroke: rgb(255, 255, 255);
+  stroke-width: 4px;
+  stroke-linecap: round;
+  
+}
+.figure-part{
+  transition: stroke 1s ease;
+}

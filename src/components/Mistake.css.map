@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AACE,QADM,CACN,EAAE,CAAA;EACA,KAAK,EAAC,OAAO;EACb,SAAS,EAAE,kBAAkB;CAC9B;;AAJH,AAKE,QALM,CAKN,WAAW,CAAA;EACT,KAAK,EAAE,OAAO;EACd,SAAS,EAAE,kBAAkB;CAC9B",
+    "sources": [
+        "Mistake.scss"
+    ],
+    "names": [],
+    "file": "Mistake.css"
+}

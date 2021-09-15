@@ -1,0 +1,30 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+$headerColor: #e0e0e0; 
+header{
+  color: $headerColor;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem 0;
+  h1{
+    font-size: calc(3rem + 3vw);
+    color: $headerColor;
+    transition: all 1.5s ease;
+  }
+  .watermark{
+    position: relative;
+    left: 20%;
+    span{
+      color: #4b4b4b;
+      font-size: calc(0.3em + 2vw);
+    }
+    #HXN{
+      font-family: 'Amatic SC', cursive;
+      color: $headerColor;
+      font-size: calc(1.5em + 2vw);
+      transition: all 1.5s ease;
+    }
+  }
+}
