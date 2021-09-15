@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Hangman%20%20/static/css/main.0fa0ee54.chunk.css",
+    "main.js": "/Hangman%20%20/static/js/main.1b0d28d2.chunk.js",
+    "main.js.map": "/Hangman%20%20/static/js/main.1b0d28d2.chunk.js.map",
+    "runtime-main.js": "/Hangman%20%20/static/js/runtime-main.a79461df.js",
+    "runtime-main.js.map": "/Hangman%20%20/static/js/runtime-main.a79461df.js.map",
+    "static/js/2.ef40fb9b.chunk.js": "/Hangman%20%20/static/js/2.ef40fb9b.chunk.js",
+    "static/js/2.ef40fb9b.chunk.js.map": "/Hangman%20%20/static/js/2.ef40fb9b.chunk.js.map",
+    "index.html": "/Hangman%20%20/index.html",
+    "static/css/main.0fa0ee54.chunk.css.map": "/Hangman%20%20/static/css/main.0fa0ee54.chunk.css.map",
+    "static/js/2.ef40fb9b.chunk.js.LICENSE.txt": "/Hangman%20%20/static/js/2.ef40fb9b.chunk.js.LICENSE.txt",
+    "static/media/JokerLaugh.65a976d1.mp3": "/Hangman%20%20/static/media/JokerLaugh.65a976d1.mp3",
+    "static/media/boneCrushing.a4b3a561.mp3": "/Hangman%20%20/static/media/boneCrushing.a4b3a561.mp3",
+    "static/media/closeDoor.76222ee7.mp3": "/Hangman%20%20/static/media/closeDoor.76222ee7.mp3",
+    "static/media/App.scss": "/Hangman%20%20/static/media/shlop rg.d4944d69.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a79461df.js",
+    "static/js/2.ef40fb9b.chunk.js",
+    "static/css/main.0fa0ee54.chunk.css",
+    "static/js/main.1b0d28d2.chunk.js"
+  ]
+}
