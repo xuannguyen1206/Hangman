@@ -17,34 +17,12 @@ function App() {
   const [annoucement, setAnnouncement] = useState('Enjoy');
   const [hint,setHint] = useState('');
   const [theme,setTheme] = useState('');
-  
-  useEffect(()=> {
-    getWordAndHint();
-  },[])
-
-  useEffect(()=> {
-    window.addEventListener('keydown', handleKeydown)
-    return () => {
-      window.removeEventListener('keydown', handleKeydown);
-    }
-  },[hint, correctLetters, mistakeLetters,missingLetters])
-
-  async function getWordAndHint(){
-    const responseWord = await fetch('https://random-word-api.herokuapp.com/word?number=1', {mode: 'cors'});
-    const dataWord = await responseWord.json();
-    const responseDefinition = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${dataWord[0]}`, {mode: 'cors'});
-    let dataDefinition = await responseDefinition.json();
-    let hintData = '';
-    try{
-      hintData = dataDefinition[0].meanings[0].definitions[0].definition;
-    } catch{
-      getWordAndHint();
-    }
-    theWord.current = dataWord[0];
-    setHint(hintData);
-  }
+  const [isPlaying, setIsPlaying] = useState(false);
 
   function handleKeydown(event){
+    if(!isPlaying){
+      return;
+    }
     const letter = event.key;
     if(!((/[a-zA-Z]/).test(letter))) return;
     else if(letter.length > 1) return; /* filter only character */
@@ -71,6 +49,40 @@ function App() {
       }
     }
   }
+
+  useEffect(()=> {
+    getWordAndHint();
+    setIsPlaying(prevState => true);
+  },[])
+
+  useEffect(()=> {
+    window.addEventListener('keydown', handleKeydown);
+    return () => {
+      window.removeEventListener('keydown', handleKeydown);
+    }
+  },[hint, correctLetters, mistakeLetters,missingLetters,isPlaying])
+
+  async function getWordAndHint(){
+    const responseWord = await fetch('https://random-word-api.herokuapp.com/word?number=1', {mode: 'cors'});
+    const dataWord = await responseWord.json();
+    const responseDefinition = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${dataWord[0]}`, {mode: 'cors'});
+    let dataDefinition = await responseDefinition.json();
+    let hintData = '';
+    try {
+      hintData = dataDefinition[0].meanings[0].definitions[0].definition;
+    } catch (error) {
+      getWordAndHint();
+    }
+    theWord.current = dataWord[0];
+    setHint(hintData);
+    setMistakeLetters([]);
+    mistakeCount.current = 0;
+    setCorrectLetters([]);
+    setMissingLetters([]);
+    setIsPlaying(prevState => true);
+  }
+
+  
   function checkUsedLetter(letter){
     const usedLetter = [...correctLetters,...mistakeLetters];
     if(usedLetter.includes(letter)){
@@ -91,7 +103,6 @@ function App() {
     return true;
   }
   function endGame(code,letter){
-    window.removeEventListener('keydown', handleKeydown);
     if(code === 1 ){
       setTheme('#38ff00');
       setAnnouncement(`You're not so stupid after all`);
@@ -112,16 +123,16 @@ function App() {
       });
       window.document.querySelector("audio[data-key = '2']").play();
     }
+    setIsPlaying(prevState => false);
   }
 
   function playAgain(){
-    setMistakeLetters([]);
-    mistakeCount.current = 0;
-    setCorrectLetters([]);
-    setMissingLetters([]);
+    theWord.current = '';
+    setHint('');
+    getWordAndHint();
+    
     setAnnouncement('Enjoy');
     setTheme('#e0e0e0');
-    getWordAndHint();
     window.document.querySelector("audio[data-key = '3']").play();
   }
   return (
