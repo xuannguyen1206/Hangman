@@ -63,7 +63,7 @@ function App() {
   },[hint, correctLetters, mistakeLetters,missingLetters,isPlaying])
 
   async function getWordAndHint(){
-    const responseWord = await fetch('https://random-word-api.herokuapp.com/word?number=1', {mode: 'cors'});
+    const responseWord = await fetch('https://random-word-form.herokuapp.com/random/noun', {mode: 'cors'});
     const dataWord = await responseWord.json();
     const responseDefinition = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${dataWord[0]}`, {mode: 'cors'});
     let dataDefinition = await responseDefinition.json();

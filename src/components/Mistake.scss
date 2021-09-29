@@ -1,7 +1,7 @@
 .mistake{
   h2{
     color:#670000; 
-    font-size: calc(1.6rem + 3vw);
+    font-size: clamp(2rem, calc(1rem + 5vw), 4.5rem);
   }
   .usedLetter{
     color: #969090;

@@ -20,7 +20,7 @@
 }
 .playBtn{
   color: #484545;  
-  font-size: calc(2rem + 2vw);
+  font-size:clamp(2rem, calc(2rem + 2vw), 2.5rem);
   user-select: auto;
   &:hover{
     text-shadow: 5px 5px 5px rgb(223, 211, 211);
