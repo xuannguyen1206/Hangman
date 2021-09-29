@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Hangman/static/css/main.a3c386ac.chunk.css",
+    "main.css": "/Hangman/static/css/main.769bd6e4.chunk.css",
     "main.js": "/Hangman/static/js/main.7b7441cb.chunk.js",
     "main.js.map": "/Hangman/static/js/main.7b7441cb.chunk.js.map",
     "runtime-main.js": "/Hangman/static/js/runtime-main.0597005b.js",
@@ -8,7 +8,7 @@
     "static/js/2.2f80f160.chunk.js": "/Hangman/static/js/2.2f80f160.chunk.js",
     "static/js/2.2f80f160.chunk.js.map": "/Hangman/static/js/2.2f80f160.chunk.js.map",
     "index.html": "/Hangman/index.html",
-    "static/css/main.a3c386ac.chunk.css.map": "/Hangman/static/css/main.a3c386ac.chunk.css.map",
+    "static/css/main.769bd6e4.chunk.css.map": "/Hangman/static/css/main.769bd6e4.chunk.css.map",
     "static/js/2.2f80f160.chunk.js.LICENSE.txt": "/Hangman/static/js/2.2f80f160.chunk.js.LICENSE.txt",
     "static/media/JokerLaugh.65a976d1.mp3": "/Hangman/static/media/JokerLaugh.65a976d1.mp3",
     "static/media/boneCrushing.a4b3a561.mp3": "/Hangman/static/media/boneCrushing.a4b3a561.mp3",
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.0597005b.js",
     "static/js/2.2f80f160.chunk.js",
-    "static/css/main.a3c386ac.chunk.css",
+    "static/css/main.769bd6e4.chunk.css",
     "static/js/main.7b7441cb.chunk.js"
   ]
 }
